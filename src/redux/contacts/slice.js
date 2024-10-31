@@ -5,6 +5,7 @@ import {
   fetchContacts,
   updateContact,
 } from './operations';
+import { logaut } from '../auth/operations';
 
 const initialState = {
   contacts: {
@@ -41,6 +42,7 @@ const slise = createSlice({
             : item
         );
       })
+      .addCase(logaut.fulfilled, () => initialState)
       .addMatcher(
         isAnyOf(
           fetchContacts.pending,

@@ -1,12 +1,9 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { goitApi, setAuthHeader } from '../auth/operations';
+import { goitApi } from '../auth/operations';
 
 export const fetchContacts = createAsyncThunk(
   'contacts/fetchAll',
   async (_, thunkApi) => {
-    const token = thunkApi.getState().auth.token;
-    setAuthHeader(token);
-
     try {
       const { data } = await goitApi.get('/contacts');
       return data;
@@ -19,8 +16,6 @@ export const fetchContacts = createAsyncThunk(
 export const addContact = createAsyncThunk(
   'contacts/addContact',
   async (newContact, thunkApi) => {
-    const token = thunkApi.getState().auth.token;
-    setAuthHeader(token);
     try {
       const { data } = await goitApi.post('/contacts', newContact);
       return data;
@@ -33,8 +28,6 @@ export const addContact = createAsyncThunk(
 export const deleteContact = createAsyncThunk(
   'contacts/deleteContact',
   async (id, thunkApi) => {
-    const token = thunkApi.getState().auth.token;
-    setAuthHeader(token);
     try {
       const { data } = await goitApi.delete(`/contacts/${id}`);
       return data.id;
@@ -47,9 +40,6 @@ export const deleteContact = createAsyncThunk(
 export const updateContact = createAsyncThunk(
   'contacts/updateContact',
   async ({ id, name, number }, thunkApi) => {
-    const token = thunkApi.getState().auth.token;
-    setAuthHeader(token);
-
     try {
       const { data } = await goitApi.patch(`/contacts/${id}`, { name, number });
       return data;

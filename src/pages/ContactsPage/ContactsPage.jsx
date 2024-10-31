@@ -4,15 +4,18 @@ import ContactList from '../../components/ContactList/ContactList';
 import SearchBox from '../../components/SearchBox/SearchBox';
 import { fetchContacts } from '../../redux/contacts/operations';
 import { selectContacts } from '../../redux/contacts/selectors';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
   const contactData = useSelector(selectContacts);
 
+  const firstLoad = useRef(true);
+
   useEffect(() => {
-    if (contactData.length === 0) {
+    if (firstLoad.current && contactData.length === 0) {
       dispatch(fetchContacts());
+      firstLoad.current = false;
     }
   }, [dispatch, contactData]);
 

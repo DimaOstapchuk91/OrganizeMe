@@ -8,6 +8,8 @@ export default {
       },
     },
     colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
       'light-blue': 'aliceblue',
       blue: 'rgb(69, 179, 230)',
       'brand-blue': 'rgb(118, 200, 238)',
