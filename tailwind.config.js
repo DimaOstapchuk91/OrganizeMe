@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
@@ -10,12 +11,13 @@ export default {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      'light-blue': 'aliceblue',
-      blue: 'rgb(69, 179, 230)',
-      'brand-blue': 'rgb(118, 200, 238)',
-      'hover-blue': 'rgb(8, 168, 241)',
-      'hover-gray': 'rgb(199, 210, 219)',
-      red: 'red',
+      background: 'var(--background)',
+      'light-blue': 'var(--light-blue)',
+      blue: 'var(--blue)',
+      'brand-blue': 'var(--brand-blue)',
+      'hover-blue': 'var(--hover-blue)',
+      'hover-gray': 'var(--hover-gray)',
+      red: 'var(--red)',
     },
   },
   daisyui: {

@@ -14,20 +14,28 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import { themeReducer } from './theme/slice';
 
-const persistConfig = {
+const persistAuthConfig = {
   key: 'userToken',
   storage,
   whitelist: ['token'],
 };
 
-const persistedReducer = persistReducer(persistConfig, authReducer);
+const persistThemeConfig = {
+  key: 'theme',
+  storage,
+};
+
+const persistedAuthReducer = persistReducer(persistAuthConfig, authReducer);
+const persistedThemeReducer = persistReducer(persistThemeConfig, themeReducer);
 
 export const store = configureStore({
   reducer: {
     contacts: contactReducer,
     filters: filtersReducer,
-    auth: persistedReducer,
+    auth: persistedAuthReducer,
+    theme: persistedThemeReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

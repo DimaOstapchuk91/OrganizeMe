@@ -13,10 +13,16 @@ import { RestrictedRoute } from './components/RestrictedRoute/RestrictedRoute';
 import { PrivateRoute } from './components/PrivateRoute/PrivateRoute';
 import { selectIsRefreshing } from './redux/auth/selectors';
 import { Toaster } from 'react-hot-toast';
+import { selectTheme } from './redux/theme/selector';
 
 function App() {
   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectIsRefreshing);
+  const theme = useSelector(selectTheme);
+
+  useEffect(() => {
+    document.body.classList.toggle('dark', theme === 'dark');
+  }, [theme]);
 
   useEffect(() => {
     dispatch(refreshUser());

@@ -1,8 +1,12 @@
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
+import ThemeToggleButton from '../ThemeToggleButton/ThemeToggleButton';
+// import { useState } from 'react';
 
 const Navigation = () => {
+  // const [isDarkMode, setIsDarkMode] = useState(false);
+
   const loggedIn = useSelector(selectIsLoggedIn);
 
   return (
@@ -18,6 +22,7 @@ const Navigation = () => {
         >
           Home
         </NavLink>
+        <ThemeToggleButton />
         {loggedIn && (
           <NavLink
             className={({ isActive }) =>
