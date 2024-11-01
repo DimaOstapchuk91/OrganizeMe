@@ -9,7 +9,7 @@ const SearchBox = () => {
     dispatch(changeFilter(form.value.toLowerCase()));
   };
   return (
-    <div className='p-7 w-[360px] bg-light-blue rounded-xl shadow-custom-blue'>
+    <div className='p-7 w-[360px] bg-light-blue rounded-xl shadow-custom-black'>
       <h2 className='text-center font-bold text-lg mb-6'>Search User</h2>
       <label className='flex flex-col text-lg font-bold gap-2'>
         Find contact by name/number

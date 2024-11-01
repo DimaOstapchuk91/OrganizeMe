@@ -10,11 +10,11 @@ const UserMenu = () => {
   const handleExit = () => {
     toast.success(`Goodbye ${userName.name}`, {
       duration: 4000,
-      position: 'top-center',
+      position: 'top-right',
 
       style: {
         borderRadius: '10px',
-        background: 'rgb(8, 168, 241)',
+        background: 'var(--hover-blue)',
         color: 'aliceblue',
       },
 
@@ -27,11 +27,11 @@ const UserMenu = () => {
   setTimeout(() => {
     toast.success(`Hello ${userName.name}`, {
       duration: 4000,
-      position: 'top-center',
+      position: 'top-right',
 
       style: {
         borderRadius: '10px',
-        background: 'rgb(8, 168, 241)',
+        background: 'var(--hover-blue)',
         color: 'aliceblue',
       },
 
@@ -42,11 +42,14 @@ const UserMenu = () => {
   return (
     <div className='flex gap-4 items-center'>
       <h2 className='text-light-blue font-bold text-2xl'>
-        Hello! {userName.name}
+        Hello!{' '}
+        <span className='text-green'>
+          {userName.name.charAt(0).toUpperCase() + userName.name.slice(1)}
+        </span>
       </h2>
       <button
         onClick={handleExit}
-        className='py-2 px-5 bg-brand-blue rounded-md text-light-blue font-bold transition-all duration-300 hover:bg-hover-blue'
+        className='py-1 px-5 mr-4 !text-red bg-brand-blue rounded-md border-2 border-green text-light-blue font-bold transition-all duration-300 hover:text-green '
       >
         Exit
       </button>

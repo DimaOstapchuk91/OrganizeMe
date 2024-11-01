@@ -14,6 +14,7 @@ import { PrivateRoute } from './components/PrivateRoute/PrivateRoute';
 import { selectIsRefreshing } from './redux/auth/selectors';
 import { Toaster } from 'react-hot-toast';
 import { selectTheme } from './redux/theme/selector';
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
   const dispatch = useDispatch();
@@ -33,40 +34,42 @@ function App() {
       {isRefreshing ? (
         <Loader />
       ) : (
-        <Layout>
-          <Routes>
-            <Route path='/' element={<HomePage />} />
-            <Route
-              path='/register'
-              element={
-                <RestrictedRoute
-                  component={<RegistrationPage />}
-                  redirectTo='/contacts'
-                />
-              }
-            />
-            <Route
-              path='/login'
-              element={
-                <RestrictedRoute
-                  component={<LoginPage />}
-                  redirectTo='/contacts'
-                />
-              }
-            />
-            <Route
-              path='/contacts'
-              element={
-                <PrivateRoute
-                  component={<ContactsPage />}
-                  redirectTo='/login'
-                />
-              }
-            />
-            <Route path='*' element={<NotFoundPage />} />
-          </Routes>
-          <Toaster />
-        </Layout>
+        <AnimatePresence>
+          <Layout>
+            <Routes>
+              <Route path='/' element={<HomePage />} />
+              <Route
+                path='/register'
+                element={
+                  <RestrictedRoute
+                    component={<RegistrationPage />}
+                    redirectTo='/contacts'
+                  />
+                }
+              />
+              <Route
+                path='/login'
+                element={
+                  <RestrictedRoute
+                    component={<LoginPage />}
+                    redirectTo='/contacts'
+                  />
+                }
+              />
+              <Route
+                path='/contacts'
+                element={
+                  <PrivateRoute
+                    component={<ContactsPage />}
+                    redirectTo='/login'
+                  />
+                }
+              />
+              <Route path='*' element={<NotFoundPage />} />
+            </Routes>
+            <Toaster />
+          </Layout>
+        </AnimatePresence>
       )}
     </>
   );

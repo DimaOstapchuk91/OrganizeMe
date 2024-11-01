@@ -5,19 +5,24 @@ export default {
   theme: {
     extend: {
       boxShadow: {
-        'custom-blue': '4px 4px 4px lightblue',
+        'custom-black': 'var(--shadow-castom)',
+        'custom-btn': 'var(--shadow-btn)',
+      },
+      opacity: {
+        'bg-opasity': 'var(--opacity-level)',
+        'full-op': 'var(--opacity-full)',
       },
     },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      background: 'var(--background)',
+      background: 'var(--brand-blue)',
       'light-blue': 'var(--light-blue)',
       blue: 'var(--blue)',
       'brand-blue': 'var(--brand-blue)',
       'hover-blue': 'var(--hover-blue)',
       'hover-gray': 'var(--hover-gray)',
-      red: 'var(--red)',
+      green: 'var(--red)',
     },
   },
   daisyui: {

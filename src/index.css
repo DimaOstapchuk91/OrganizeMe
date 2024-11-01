@@ -3,13 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: rgb(8, 168, 241);
   --light-blue: aliceblue;
   --blue: rgb(69, 179, 230);
-  --brand-blue: rgb(118, 200, 238);
+  --brand-blue: rgb(69, 179, 230);
   --hover-blue: rgb(8, 168, 241);
   --hover-gray: rgb(199, 210, 219);
   --red: red;
+  --shadow-castom: 0 10px 20px rgba(0, 0, 0, 0.8);
+  --shadow-btn: 0 3px 10px rgba(0, 0, 0, 0.8);
+  --bg-gradient: url('./assets/img/image-bg.jpg');
+  --opacity-level: 1;
+  --opacity-full: 1;
   transition: background-color 500ms ease;
 }
 
@@ -21,7 +26,19 @@
   --brand-blue: rgb(19, 21, 22);
   --hover-blue: rgb(16, 17, 17);
   --hover-gray: rgb(23, 28, 32);
-  --red: red;
+  --red: green;
+  --shadow-castom: 0 10px 20px #444444;
+  --shadow-btn: 0 3px 10px rgba(0, 0, 0, 0.8);
+  --opacity-level: 0.7;
+  --opacity-full: 1;
+  --bg-gradient: linear-gradient(
+      to bottom,
+      rgba(10, 10, 10, 0.8),
+      rgba(10, 10, 10, 0.3),
+      rgba(20, 20, 19, 0.6),
+      rgba(51, 49, 48, 0.7)
+    ),
+    url('./assets/img/image-bg.jpg');
   transition: background-color 500ms ease, color 500ms ease;
 }
 
@@ -31,6 +48,10 @@ body {
   transition: all 1s ease;
   width: 100%;
   min-height: 100vh;
+  background: var(--bg-gradient);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 div {

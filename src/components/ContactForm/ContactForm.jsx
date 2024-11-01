@@ -52,7 +52,7 @@ const ContactForm = () => {
         onSubmit={handleForm}
         validationSchema={orderSchema}
       >
-        <Form className='flex flex-col p-7 w-[360px] gap-4 rounded-xl shadow-custom-blue bg-light-blue mb-6'>
+        <Form className='flex flex-col p-7 w-[360px] gap-4 rounded-xl shadow-custom-black bg-light-blue mb-6'>
           <h2 className='text-center font-bold text-lg'>Add New Contact</h2>
           <label className='flex flex-col gap-2 font-bold'>
             <div className='flex justify-between'>
@@ -77,7 +77,7 @@ const ContactForm = () => {
             />
           </label>
           <button
-            className='py-2 px-5 m-auto font-bold bg-blue text-light-blue rounded-lg transition-all hover:bg-hover-blue'
+            className='py-2 px-5 m-auto font-bold bg-blue text-light-blue rounded-lg transition-all shadow-custom-btn hover:bg-hover-blue'
             type='submit'
           >
             Add contact
