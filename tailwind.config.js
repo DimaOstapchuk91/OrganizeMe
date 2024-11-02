@@ -16,13 +16,14 @@ export default {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      background: 'var(--brand-blue)',
-      'light-blue': 'var(--light-blue)',
+      background: 'var(--background)',
+      green: 'var(--green)',
+      'bg-gray': 'var(--bg-gray)',
+      'text-light': 'var(--text-light)',
       blue: 'var(--blue)',
       'brand-blue': 'var(--brand-blue)',
       'hover-blue': 'var(--hover-blue)',
       'hover-gray': 'var(--hover-gray)',
-      green: 'var(--red)',
     },
   },
   daisyui: {

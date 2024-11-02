@@ -52,7 +52,7 @@ const ContactForm = () => {
         onSubmit={handleForm}
         validationSchema={orderSchema}
       >
-        <Form className='flex flex-col p-7 w-[360px] gap-4 rounded-xl shadow-custom-black bg-light-blue mb-6'>
+        <Form className='flex flex-col p-7 w-[360px] gap-4 rounded-xl shadow-custom-black bg-bg-gray mb-6 text-text-light'>
           <h2 className='text-center font-bold text-lg'>Add New Contact</h2>
           <label className='flex flex-col gap-2 font-bold'>
             <div className='flex justify-between'>
@@ -60,7 +60,7 @@ const ContactForm = () => {
               <ErrorMessage className='text-red' name='name' component='p' />
             </div>
             <Field
-              className='py-2 px-5 h-8 rounded-md border-brand-blue border-2 outline-none text-base font-medium focus:border-hover-blue'
+              className='py-2 px-5 h-8 rounded-md border-brand-blue border-2 outline-none text-base font-medium focus:border-green'
               name='name'
               placeholder='Enter Contact Name'
             />
@@ -71,13 +71,13 @@ const ContactForm = () => {
               <ErrorMessage className='text-red' name='number' component='p' />
             </div>
             <Field
-              className='py-2 px-5 h-8 rounded-md border-brand-blue border-2 outline-none text-base font-medium focus:border-hover-blue'
+              className='py-2 px-5 h-8 rounded-md border-brand-blue border-2 outline-none text-base font-medium focus:border-green'
               name='number'
               placeholder='Enter Contact Number'
             />
           </label>
           <button
-            className='py-2 px-5 m-auto font-bold bg-blue text-light-blue rounded-lg transition-all shadow-custom-btn hover:bg-hover-blue'
+            className='py-2 px-5 m-auto font-bold bg-blue text-light-blue rounded-lg transition-all shadow-custom-btn hover:bg-hover-blue hover:text-green'
             type='submit'
           >
             Add contact

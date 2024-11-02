@@ -41,7 +41,7 @@ const UserMenu = () => {
   }, 1000);
   return (
     <div className='flex gap-4 items-center'>
-      <h2 className='text-light-blue font-bold text-2xl'>
+      <h2 className='text-text-light font-bold text-2xl'>
         Hello!{' '}
         <span className='text-green'>
           {userName.name.charAt(0).toUpperCase() + userName.name.slice(1)}
@@ -49,7 +49,7 @@ const UserMenu = () => {
       </h2>
       <button
         onClick={handleExit}
-        className='py-1 px-5 mr-4 !text-red bg-brand-blue rounded-md border-2 border-green text-light-blue font-bold transition-all duration-300 hover:text-green '
+        className='py-1 px-5 mr-4 !text-red rounded-md border-2 border-green text-text-light font-bold transition-all duration-300 hover:text-green '
       >
         Exit
       </button>

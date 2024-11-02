@@ -5,7 +5,7 @@ const AuthNav = () => {
     <div>
       <NavLink
         className={({ isActive }) =>
-          `mr-4 font-bold text-xl text-light-blue transition-all duration-300 hover:text-green ${
+          `mr-4 font-bold text-xl text-text-light transition-all duration-300 hover:text-green ${
             isActive ? '!text-green underline' : ''
           }`
         }
@@ -15,7 +15,7 @@ const AuthNav = () => {
       </NavLink>
       <NavLink
         className={({ isActive }) =>
-          `mr-4 font-bold text-xl text-light-blue transition-all duration-300 hover:text-green ${
+          `mr-4 font-bold text-xl text-text-light transition-all duration-300 hover:text-green ${
             isActive ? '!text-green underline' : ''
           }`
         }

@@ -6,10 +6,10 @@
   --background: rgb(8, 168, 241);
   --light-blue: aliceblue;
   --blue: rgb(69, 179, 230);
-  --brand-blue: rgb(69, 179, 230);
+  /* --brand-blue: rgb(69, 179, 230); */
   --hover-blue: rgb(8, 168, 241);
   --hover-gray: rgb(199, 210, 219);
-  --red: red;
+  --green: red;
   --shadow-castom: 0 10px 20px rgba(0, 0, 0, 0.8);
   --shadow-btn: 0 3px 10px rgba(0, 0, 0, 0.8);
   --bg-gradient: url('./assets/img/image-bg.jpg');
@@ -20,13 +20,13 @@
 
 /* Темна тема */
 .dark {
-  --background: #444444;
-  --light-blue: aliceblue;
+  --background: rgb(19, 21, 22, 0.7);
+  --text-light: aliceblue;
   --blue: rgb(27, 33, 36);
-  --brand-blue: rgb(19, 21, 22);
+  --bg-gray: #222222;
   --hover-blue: rgb(16, 17, 17);
   --hover-gray: rgb(23, 28, 32);
-  --red: green;
+  --green: green;
   --shadow-castom: 0 10px 20px #444444;
   --shadow-btn: 0 3px 10px rgba(0, 0, 0, 0.8);
   --opacity-level: 0.7;
