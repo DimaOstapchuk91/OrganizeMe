@@ -14,13 +14,7 @@ const ThemeToggleButton = () => {
 
   return (
     <label className='swap swap-rotate'>
-      <input
-        type='checkbox'
-        // className={` ${
-        //   theme === 'light' ? 'hover:!fill-green' : ' hover:!fill-green'
-        // }`}
-        onClick={handleToggleTheme}
-      />
+      <input type='checkbox' onClick={handleToggleTheme} />
 
       <svg
         className='swap-off h-8 w-8 fill-text-light hover:fill-green'

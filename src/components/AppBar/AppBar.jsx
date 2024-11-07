@@ -9,19 +9,19 @@ import ThemeToggleButton from '../ThemeToggleButton/ThemeToggleButton';
 const AppBar = () => {
   const login = useSelector(selectIsLoggedIn);
   return (
-    <div className='pt-4 pb-16 '>
-      <div className='flex w-[80%] rounded-xl m-auto mb-4 py-4 px-12 justify-between bg-background items-center'>
+    <div className='pt-4  w-[80%] m-auto'>
+      <div className='flex  rounded-xl  mb-10 py-4 px-12 justify-between bg-background items-center'>
         <NavLink to='/' className='text-text-light font-bold text-2xl'>
           Organize<span className='text-green'>Me</span>
         </NavLink>
-        <div className='flex'>
-          <Navigation />
-          {!login && <AuthNav />}
-        </div>
+        <div className='flex'>{!login && <AuthNav />}</div>
         <div className='flex'>
           {login && <UserMenu />}
           <ThemeToggleButton />
         </div>
+      </div>
+      <div className='ml-8 mb-2'>
+        <Navigation />
       </div>
     </div>
   );

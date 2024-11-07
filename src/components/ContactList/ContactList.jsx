@@ -23,17 +23,6 @@ const ContactList = () => {
   return (
     <div className='w-full'>
       {contact.length > 0 ? (
-        // <ul className='flex flex-col gap-6 '>
-        //   {loader && <Loader />}
-        //   {searchUsers.map(user => (
-        //     <li
-        //       className='flex justify-between items-center p-4 w-full h-20 bg-light-blue rounded-xl shadow-custom-blue transition-all duration-300 hover:scale-105'
-        //       key={user.id}
-        //     >
-        //       <Contact user={user} />
-        //     </li>
-        //   ))}
-        // </ul>
         <Reorder.Group
           className='flex flex-col gap-6 relative'
           axis='y'
@@ -43,7 +32,7 @@ const ContactList = () => {
           {loader && <Loader />}
           {orderContact.map(item => (
             <Reorder.Item
-              className='flex justify-between items-center p-4 w-full h-20 bg-light-blue rounded-xl shadow-custom-black  will-change-transform'
+              className='flex justify-between items-center p-4 w-full h-21 bg-bg-gray cursor-grab rounded-xl shadow-custom-black  will-change-transform'
               key={item.id}
               value={item}
               transition={{

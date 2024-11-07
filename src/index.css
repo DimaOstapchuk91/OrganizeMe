@@ -21,9 +21,9 @@
 .dark {
   --background: rgb(19, 21, 22, 0.7);
   --text-light: aliceblue;
-  --blue: rgb(27, 33, 36);
+  --red: rgb(255, 0, 0, 0.6);
   --bg-gray: #222222;
-  --hover-blue: rgb(16, 17, 17);
+  --yellow: rgb(255, 255, 0, 0.6);
   --hover-gray: rgb(23, 28, 32);
   --green: green;
   --shadow-castom: 0 10px 20px #444444;
@@ -49,8 +49,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-div {
-  transition: background-color 500ms ease, color 500ms ease;
+  background-attachment: fixed;
+  scrollbar-gutter: stable;
 }

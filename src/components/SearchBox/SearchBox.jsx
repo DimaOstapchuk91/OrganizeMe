@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { changeFilter } from '../../redux/filters/slice';
+import { FaSearch } from 'react-icons/fa';
 
 const SearchBox = () => {
   const dispatch = useDispatch();
@@ -9,12 +10,12 @@ const SearchBox = () => {
     dispatch(changeFilter(form.value.toLowerCase()));
   };
   return (
-    <div className='p-7 w-[360px] bg-light-blue rounded-xl shadow-custom-black'>
-      <h2 className='text-center font-bold text-lg mb-6'>Search User</h2>
-      <label className='flex flex-col text-lg font-bold gap-2'>
-        Find contact by name/number
+    <div className='flex justify-center mb-4 p-4 w-[100%] bg-bg-gray rounded-xl shadow-custom-black'>
+      {/* <h2 className='text-center font-bold text-lg mb-6'>Search User</h2> */}
+      <label className='flex items-center  text-lg font-bold gap-2'>
+        <FaSearch className='fill-text-light' />
         <input
-          className='py-2 px-5 h-8 rounded-md border-brand-blue border-2 outline-none text-base font-medium focus:border-hover-blue'
+          className='py-2 px-5 h-8 rounded-md border-brand-blue border-2 outline-none text-base font-medium focus:border-green shadow-custom-btn '
           placeholder='Enter Name/Number'
           type='text'
           onChange={handleSearchUser}

@@ -7,6 +7,8 @@ import EditContactModal from '../EditContactModal/EditContactModal';
 import ReactModal from 'react-modal';
 import toast from 'react-hot-toast';
 import ModalDelete from '../ModalDelete/ModalDelete';
+import { IoIosContact } from 'react-icons/io';
+import { FaPhone } from 'react-icons/fa6';
 
 const Contact = ({ user }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -42,14 +44,18 @@ const Contact = ({ user }) => {
   return (
     <>
       <div>
-        <p className='font-bold'>
-          Name: {user.name.charAt(0).toUpperCase() + user.name.slice(1)}
+        <p className='flex items-center font-bold text-text-light mb-2'>
+          <IoIosContact className='w-6 h-6 mr-3 text-yellow' />
+
+          {user.name.charAt(0).toUpperCase() + user.name.slice(1)}
         </p>
-        <p className='font-bold'>Phone: {user.number}</p>
+        <p className='flex items-center font-bold text-text-light'>
+          <FaPhone className='w-4 h-4 mr-4 text-green ml-1' /> {user.number}
+        </p>
       </div>
       <div className='flex flex-col gap-1'>
         <button
-          className='bg-red opacity-70 text-light-blue p-1 rounded-md transition-all duration-300 hover:opacity-80'
+          className='bg-red mb-1 opacity-70 text-text-light p-1 rounded-md transition-all duration-300 shadow-custom-btn hover:opacity-90 '
           type='button'
           onClick={() => handleOpenModal(setIsModalDellOpen)}
         >
@@ -57,7 +63,7 @@ const Contact = ({ user }) => {
         </button>
         <button
           onClick={() => handleOpenModal(setIsModalOpen)}
-          className='bg-blue opacity-80 text-light-blue p-1 rounded-md transition-all duration-300 hover:bg-hover-blue'
+          className='bg-green opacity-80 text-text-light p-1 rounded-md transition-all shadow-custom-btn duration-300 hover:opacity-100'
         >
           <RiEdit2Line size={24} />
         </button>

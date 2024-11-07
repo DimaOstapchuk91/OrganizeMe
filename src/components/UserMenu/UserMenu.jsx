@@ -49,7 +49,7 @@ const UserMenu = () => {
       </h2>
       <button
         onClick={handleExit}
-        className='py-1 px-5 mr-4 !text-red rounded-md border-2 border-green text-text-light font-bold transition-all duration-300 hover:text-green '
+        className='py-1 px-5 mr-4 rounded-md border-2 border-green text-text-light font-bold transition-all duration-300 hover:text-green '
       >
         Exit
       </button>

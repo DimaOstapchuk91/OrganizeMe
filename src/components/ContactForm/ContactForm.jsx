@@ -60,7 +60,7 @@ const ContactForm = () => {
               <ErrorMessage className='text-red' name='name' component='p' />
             </div>
             <Field
-              className='py-2 px-5 h-8 rounded-md border-brand-blue border-2 outline-none text-base font-medium focus:border-green'
+              className='py-2 px-5 h-8 text-background rounded-md  border-2 outline-none text-base font-medium shadow-custom-black focus:border-green'
               name='name'
               placeholder='Enter Contact Name'
             />
@@ -71,13 +71,13 @@ const ContactForm = () => {
               <ErrorMessage className='text-red' name='number' component='p' />
             </div>
             <Field
-              className='py-2 px-5 h-8 rounded-md border-brand-blue border-2 outline-none text-base font-medium focus:border-green'
+              className='py-2 px-5 h-8 text-background rounded-md  border-2 outline-none  text-base font-medium shadow-custom-black  focus:border-green'
               name='number'
               placeholder='Enter Contact Number'
             />
           </label>
           <button
-            className='py-2 px-5 m-auto font-bold bg-blue text-light-blue rounded-lg transition-all shadow-custom-btn hover:bg-hover-blue hover:text-green'
+            className='py-2 px-5 m-auto font-bold bg-background text-light-blue rounded-lg transition-all shadow-custom-btn hover:bg-hover-blue hover:text-green'
             type='submit'
           >
             Add contact

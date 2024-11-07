@@ -21,11 +21,12 @@ const ContactsPage = () => {
 
   return (
     <div className='flex w-[80%] m-auto bg-background p-8 rounded-xl gap-8 '>
-      <div className='flex flex-col'>
-        <ContactForm />
+      <ContactForm />
+
+      <div className='flex flex-col w-full'>
         <SearchBox />
+        <ContactList />
       </div>
-      <ContactList />
     </div>
   );
 };
