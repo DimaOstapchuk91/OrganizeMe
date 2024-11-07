@@ -20,7 +20,7 @@ const AppBar = () => {
           <ThemeToggleButton />
         </div>
       </div>
-      <div className='ml-8 mb-2'>
+      <div className=' mb-[11px]'>
         <Navigation />
       </div>
     </div>

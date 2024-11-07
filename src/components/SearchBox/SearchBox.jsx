@@ -11,7 +11,6 @@ const SearchBox = () => {
   };
   return (
     <div className='flex justify-center mb-4 p-4 w-[100%] bg-bg-gray rounded-xl shadow-custom-black'>
-      {/* <h2 className='text-center font-bold text-lg mb-6'>Search User</h2> */}
       <label className='flex items-center  text-lg font-bold gap-2'>
         <FaSearch className='fill-text-light' />
         <input
