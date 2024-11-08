@@ -2,7 +2,7 @@ import LoginForm from '../../components/LoginForm/LoginForm';
 
 const LoginPage = () => {
   return (
-    <div className='p-8  w-[1000px] m-auto bg-blue rounded-xl'>
+    <div className='p-8  w-[80%] bg-background m-auto bg-blue rounded-xl'>
       <LoginForm />
     </div>
   );

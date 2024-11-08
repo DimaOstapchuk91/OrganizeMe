@@ -23,7 +23,7 @@ const HomePage = () => {
           page to view, add, update, or delete your contacts.
         </p>
       ) : (
-        <p className='text-text-light text-xl font-bold'>
+        <p className='text-text-light text-center text-xl font-bold'>
           To get started, please{' '}
           <NavLink className='underline text-green' to='/register'>
             Register

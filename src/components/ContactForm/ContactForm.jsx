@@ -52,32 +52,34 @@ const ContactForm = () => {
         onSubmit={handleForm}
         validationSchema={orderSchema}
       >
-        <Form className='flex flex-col p-7 w-[360px] gap-4 rounded-xl shadow-custom-black bg-bg-gray mb-6 text-text-light'>
-          <h2 className='text-center font-bold text-lg'>Add New Contact</h2>
+        <Form className='flex flex-col p-7 w-[360px] gap-4 rounded-xl shadow-custom-black bg-bg-gray mb-6'>
+          <h2 className='text-center text-text-light font-bold text-lg'>
+            Add New Contact
+          </h2>
           <label className='flex flex-col gap-2 font-bold'>
             <div className='flex justify-between'>
-              <p>Name</p>
+              <p className='text-text-light'>Name</p>
               <ErrorMessage className='text-red' name='name' component='p' />
             </div>
             <Field
-              className='py-2 px-5 h-8 text-background rounded-md  border-2 outline-none text-base font-medium shadow-custom-black focus:border-green'
+              className='py-2 px-5 h-8  rounded-md  border-2 outline-none text-base font-medium shadow-custom-black focus:border-green'
               name='name'
               placeholder='Enter Contact Name'
             />
           </label>
           <label className='flex flex-col gap-2 font-bold'>
             <div className='flex justify-between'>
-              <p>Number</p>
+              <p className='text-text-light'>Number</p>
               <ErrorMessage className='text-red' name='number' component='p' />
             </div>
             <Field
-              className='py-2 px-5 h-8 text-background rounded-md  border-2 outline-none  text-base font-medium shadow-custom-black  focus:border-green'
+              className='py-2 px-5 h-8 rounded-md  border-2 outline-none  text-base font-medium shadow-custom-black  focus:border-green'
               name='number'
               placeholder='Enter Contact Number'
             />
           </label>
           <button
-            className='py-2 px-5 m-auto font-bold bg-background text-light-blue rounded-lg transition-all shadow-custom-btn hover:bg-hover-blue hover:text-green'
+            className='py-2 px-5 m-auto font-bold bg-background text-text-light rounded-lg transition-all shadow-custom-btn hover:bg-hover-blue hover:text-green'
             type='submit'
           >
             Add contact

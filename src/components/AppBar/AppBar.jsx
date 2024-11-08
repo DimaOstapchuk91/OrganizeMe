@@ -14,8 +14,8 @@ const AppBar = () => {
         <NavLink to='/' className='text-text-light font-bold text-2xl'>
           Organize<span className='text-green'>Me</span>
         </NavLink>
-        <div className='flex'>{!login && <AuthNav />}</div>
         <div className='flex'>
+          {!login && <AuthNav />}
           {login && <UserMenu />}
           <ThemeToggleButton />
         </div>

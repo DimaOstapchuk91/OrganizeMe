@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import { login } from '../../redux/auth/operations';
 import toast from 'react-hot-toast';
 import { selectIsError } from '../../redux/auth/selectors';
+import { NavLink } from 'react-router-dom';
 
 const LoginForm = () => {
   const dispatch = useDispatch();
@@ -41,7 +42,7 @@ const LoginForm = () => {
 
   return (
     <div>
-      <h2 className='text-center text-light-blue font-bold text-4xl mb-8'>
+      <h2 className='text-center text-text-light font-bold text-4xl mb-8'>
         Login
       </h2>
       <Formik
@@ -49,21 +50,21 @@ const LoginForm = () => {
         validationSchema={orderSchema}
         onSubmit={handleLogin}
       >
-        <Form className='flex flex-col items-center gap-4 bg-light-blue  p-8 rounded-xl'>
+        <Form className='flex flex-col w-[400px] m-auto items-center gap-4 bg-bg-gray  p-8 rounded-xl'>
           <label className='flex flex-col font-semibold'>
             <div className='flex justify-between'>
-              <p>Login</p>
+              <p className='text-text-light mb-1'>Login</p>
               <ErrorMessage className='text-red' name='email' component='p' />
             </div>
             <Field
-              className='py-2 px-5 w-full h-8 rounded-md border-brand-blue border-2 outline-none focus:border-blue'
+              className='py-2 px-5 h-8 rounded-md  border-2 outline-none  text-base font-medium shadow-custom-black  focus:border-green'
               name='email'
               placeholder='Enter the Login'
             />
           </label>
-          <label className='flex flex-col text-white font-semibold'>
+          <label className='flex flex-col font-semibold mb-2'>
             <div className='flex justify-between'>
-              <p>Password</p>
+              <p className='text-text-light mb-1'>Password</p>
               <ErrorMessage
                 className='text-red'
                 name='password'
@@ -71,17 +72,23 @@ const LoginForm = () => {
               />
             </div>
             <Field
-              className='py-2 px-5 h-8 rounded-md border-brand-blue border-2 outline-none focus:border-blue w-full'
+              className='py-2 px-5 h-8 rounded-md  border-2 outline-none  text-base font-medium shadow-custom-black  focus:border-green'
               name='password'
               placeholder='Enter the password'
             />
           </label>
           <button
-            className='py-2 px-5 m-auto font-bold bg-blue text-light-blue rounded-lg transition-all hover:bg-hover-blue'
+            className='py-2 px-10 m-auto font-bold bg-background text-text-light rounded-lg transition-all shadow-custom-btn hover:bg-hover-blue hover:text-green'
             type='submit'
           >
             Login
           </button>
+          <NavLink
+            className='underline text-text-light opacity-50 transition-all duration-300 hover:text-green'
+            to='/register'
+          >
+            Not have account? Register
+          </NavLink>
         </Form>
       </Formik>
     </div>
