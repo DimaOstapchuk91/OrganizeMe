@@ -41,7 +41,7 @@ const LoginForm = () => {
   });
 
   return (
-    <div>
+    <div className='p-8 w-[90%] md:w-[80%] bg-background m-auto bg-blue rounded-xl'>
       <h2 className='text-center text-text-light font-bold text-4xl mb-8'>
         Login
       </h2>
@@ -50,7 +50,7 @@ const LoginForm = () => {
         validationSchema={orderSchema}
         onSubmit={handleLogin}
       >
-        <Form className='flex flex-col w-[400px] m-auto items-center gap-4 bg-bg-gray  p-8 rounded-xl'>
+        <Form className='flex flex-col max-w-[400px] m-auto items-center gap-4 bg-bg-gray  p-8 rounded-xl'>
           <label className='flex flex-col font-semibold'>
             <div className='flex justify-between'>
               <p className='text-text-light mb-1'>Login</p>

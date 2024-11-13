@@ -6,7 +6,7 @@ const HomePage = () => {
   const login = useSelector(selectIsLoggedIn);
 
   return (
-    <div className='p-8  w-[80%] bg-background m-auto bg-blue rounded-xl rounded-tl-none'>
+    <div className='p-8 w-[90%]  md:w-[80%] bg-background m-auto bg-blue rounded-xl rounded-tl-none'>
       <h1 className='text-center text-text-light text-3xl font-bold mb-10'>
         Welcome to Your Personal Phonebook!{' '}
       </h1>
