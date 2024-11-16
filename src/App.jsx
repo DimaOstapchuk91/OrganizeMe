@@ -15,10 +15,6 @@ import { selectIsRefreshing } from './redux/auth/selectors';
 import { Toaster } from 'react-hot-toast';
 import { selectTheme } from './redux/theme/selector';
 import { AnimatePresence } from 'framer-motion';
-// import {
-//   addScrollbarPadding,
-//   removeScrollbarPadding,
-// } from './utils/scrollBarHelper';
 
 function App() {
   const dispatch = useDispatch();

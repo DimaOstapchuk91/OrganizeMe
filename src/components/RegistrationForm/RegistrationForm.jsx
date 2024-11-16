@@ -1,31 +1,14 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
-import * as Yup from 'yup';
 import { register } from '../../redux/auth/operations';
 import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { orderSchemaReg } from '../../utils/formValidation.js';
 
 const RegistrationForm = () => {
   const dispatch = useDispatch();
 
-  const orderSchema = Yup.object({
-    name: Yup.string()
-      .min(3, 'Minimum 3 characters')
-      .max(50, 'Maximum 50 characters')
-      .required('Name is required'),
-    email: Yup.string()
-      .email('Invalid email format')
-      .min(3, 'Minimum 3 characters')
-      .max(50, 'Maximum 50 characters')
-      .required('Email is required'),
-    password: Yup.string()
-      .min(3, 'Minimum 3 characters')
-      .max(50, 'Maximum 50 characters')
-      .required('Password is required'),
-  });
-
   const handleRegister = (value, options) => {
     dispatch(register(value));
-    console.log(value);
     options.resetForm();
   };
 
@@ -37,7 +20,7 @@ const RegistrationForm = () => {
       <div className='flex flex-col md:flex-row md:items-baseline gap-8'>
         <Formik
           initialValues={{ name: '', email: '', password: '' }}
-          validationSchema={orderSchema}
+          validationSchema={orderSchemaReg}
           onSubmit={handleRegister}
         >
           <Form className='flex flex-col md:w-1/2 xl:w-1/3 items-center gap-4 bg-bg-gray  p-8 rounded-xl'>

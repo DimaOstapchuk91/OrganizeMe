@@ -1,10 +1,10 @@
 import { ErrorMessage, Field, Formik, Form } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
-import * as Yup from 'yup';
 import { login } from '../../redux/auth/operations';
-import toast from 'react-hot-toast';
 import { selectIsError } from '../../redux/auth/selectors';
 import { NavLink } from 'react-router-dom';
+import { orderSchemaLogin } from '../../utils/formValidation.js';
+import { errToast } from '../../utils/toast.js';
 
 const LoginForm = () => {
   const dispatch = useDispatch();
@@ -14,31 +14,10 @@ const LoginForm = () => {
     dispatch(login(value));
 
     if (errorLogin) {
-      toast.error('User Not Found!', {
-        duration: 4000,
-        position: 'top-center',
-
-        style: {
-          borderRadius: '10px',
-          background: 'red',
-          color: 'aliceblue',
-        },
-        icon: '🚩 ',
-      });
+      errToast('User Not Found!');
+      return;
     }
   };
-
-  const orderSchema = Yup.object({
-    email: Yup.string()
-      .email('Invalid email format')
-      .min(3, 'Minimum 3 characters')
-      .max(50, 'Maximum 50 characters')
-      .required('Must be filled'),
-    password: Yup.string()
-      .min(3, 'Minimum 3 characters')
-      .max(50, 'Maximum 50 characters')
-      .required('Email is required'),
-  });
 
   return (
     <div className='p-8 w-[90%] md:w-[80%] bg-background m-auto bg-blue rounded-xl'>
@@ -47,7 +26,7 @@ const LoginForm = () => {
       </h2>
       <Formik
         initialValues={{ email: '', password: '' }}
-        validationSchema={orderSchema}
+        validationSchema={orderSchemaLogin}
         onSubmit={handleLogin}
       >
         <Form className='flex flex-col max-w-[400px] m-auto items-center gap-4 bg-bg-gray  p-8 rounded-xl'>

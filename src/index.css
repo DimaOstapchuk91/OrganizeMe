@@ -18,7 +18,7 @@
   transition: background-color 500ms ease;
 }
 
-/* Темна тема */
+/* dark theme*/
 .dark {
   --background: rgb(19, 21, 22, 0.7);
   --text-light: aliceblue;

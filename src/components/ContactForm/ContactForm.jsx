@@ -1,24 +1,11 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
-import * as Yup from 'yup';
-
 import { useDispatch } from 'react-redux';
 import { addContact } from '../../redux/contacts/operations';
-import toast from 'react-hot-toast';
+import { orderSchemaContact } from '../../utils/formValidation.js';
+import { successfullyToast } from '../../utils/toast.js';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
-
-  const orderSchema = Yup.object({
-    name: Yup.string()
-      .min(3, 'Minimum 3 characters')
-      .max(50, 'Maximum 50 characters')
-      .required('Must be filled'),
-    number: Yup.string()
-      .matches(/^\+?[1-9]\d{1,14}$/, 'Invalid phone number')
-      .min(3, 'Minimum 3 digits')
-      .max(50, 'Maximum 50 digits')
-      .required('Must be filled'),
-  });
 
   const handleForm = (values, options) => {
     dispatch(
@@ -28,19 +15,7 @@ const ContactForm = () => {
       })
     );
 
-    toast.success('Successfully Add Contact', {
-      duration: 4000,
-      position: 'top-center',
-
-      style: {
-        borderRadius: '10px',
-        background: 'rgb(8, 168, 241)',
-        color: 'aliceblue',
-      },
-
-      className: '',
-      icon: '✅ ',
-    });
+    successfullyToast('Successfully Add Contact');
 
     options.resetForm();
   };
@@ -50,7 +25,7 @@ const ContactForm = () => {
       <Formik
         initialValues={{ name: '', number: '' }}
         onSubmit={handleForm}
-        validationSchema={orderSchema}
+        validationSchema={orderSchemaContact}
       >
         <Form className='flex flex-col p-7 w-full md:w-[300px] xl:w-[360px] gap-4 rounded-xl shadow-custom-black bg-bg-gray mb-6'>
           <h2 className='text-center text-text-light font-bold text-lg'>

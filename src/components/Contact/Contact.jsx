@@ -3,12 +3,11 @@ import { deleteContact } from '../../redux/contacts/operations';
 import { RiDeleteBinLine, RiEdit2Line } from 'react-icons/ri';
 import { useState } from 'react';
 import EditContactModal from '../EditContactModal/EditContactModal';
-
 import ReactModal from 'react-modal';
-import toast from 'react-hot-toast';
 import ModalDelete from '../ModalDelete/ModalDelete';
 import { IoIosContact } from 'react-icons/io';
 import { FaPhone } from 'react-icons/fa6';
+import { successfullyToast } from '../../utils/toast.js';
 
 const Contact = ({ user }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -17,19 +16,8 @@ const Contact = ({ user }) => {
 
   const handleDeleteContactUser = () => {
     dispatch(deleteContact(user.id));
-    toast.success('Successfully Deleted', {
-      duration: 4000,
-      position: 'top-center',
 
-      style: {
-        borderRadius: '10px',
-        background: 'rgb(8, 168, 241)',
-        color: 'aliceblue',
-      },
-
-      className: '',
-      icon: '✅ ',
-    });
+    successfullyToast('Successfully Deleted');
   };
 
   const handleOpenModal = openModal => {
