@@ -4,10 +4,10 @@ import { NavLink } from 'react-router-dom';
 
 const MobileBottomMenu = () => {
   return (
-    <div className='bg-background  w-[90%] p-2 px-6 pb-0 mx-auto rounded-t-xl'>
+    <div className='bg-background  w-[90%] p-2 px-6 pb-2 mx-auto rounded-t-xl'>
       <nav className=''>
         <ul className='flex justify-center'>
-          <li className='mr-4'>
+          <li className='mr-4 h-8 w-8'>
             <NavLink
               className={({ isActive }) =>
                 `text-text-light mr-4 transition-all duration-300 hover:text-green ${
@@ -16,11 +16,11 @@ const MobileBottomMenu = () => {
               }
               to='/'
             >
-              <AiOutlineHome className='h-8 w-8' />
+              <AiOutlineHome className='h-auto w-8' />
             </NavLink>
           </li>
 
-          <li>
+          <li className='h-8 w-8'>
             <NavLink
               className={({ isActive }) =>
                 `text-text-light transition-all duration-300 hover:text-green ${
@@ -29,7 +29,7 @@ const MobileBottomMenu = () => {
               }
               to='/contacts'
             >
-              <RiContactsBook3Line className='h-8 w-8' />
+              <RiContactsBook3Line className='h-auto w-8' />
             </NavLink>
           </li>
         </ul>

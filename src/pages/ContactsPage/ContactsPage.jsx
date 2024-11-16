@@ -20,7 +20,10 @@ const ContactsPage = () => {
   }, [dispatch, contactData]);
 
   return (
-    <div className='flex w-[80%] m-auto bg-background p-8 rounded-xl gap-8 '>
+    <div
+      className='flex flex-col items-center md:flex-row
+    w-[90%] md:w-[80%] m-auto bg-background p-8 rounded-xl gap-2 md:gap-8 '
+    >
       <ContactForm />
 
       <div className='flex flex-col w-full'>

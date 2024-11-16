@@ -52,7 +52,7 @@ const ContactForm = () => {
         onSubmit={handleForm}
         validationSchema={orderSchema}
       >
-        <Form className='flex flex-col p-7 w-[360px] gap-4 rounded-xl shadow-custom-black bg-bg-gray mb-6'>
+        <Form className='flex flex-col p-7 w-full md:w-[300px] xl:w-[360px] gap-4 rounded-xl shadow-custom-black bg-bg-gray mb-6'>
           <h2 className='text-center text-text-light font-bold text-lg'>
             Add New Contact
           </h2>
@@ -62,7 +62,7 @@ const ContactForm = () => {
               <ErrorMessage className='text-red' name='name' component='p' />
             </div>
             <Field
-              className='py-2 px-5 h-8  rounded-md  border-2 outline-none text-base font-medium shadow-custom-black focus:border-green'
+              className='py-2 px-5 h-8 w-full rounded-md  border-2 outline-none text-base font-medium shadow-custom-black focus:border-green'
               name='name'
               placeholder='Enter Contact Name'
             />
@@ -73,7 +73,7 @@ const ContactForm = () => {
               <ErrorMessage className='text-red' name='number' component='p' />
             </div>
             <Field
-              className='py-2 px-5 h-8 rounded-md  border-2 outline-none  text-base font-medium shadow-custom-black  focus:border-green'
+              className='py-2 px-5 h-8 w-full rounded-md  border-2 outline-none  text-base font-medium shadow-custom-black  focus:border-green'
               name='number'
               placeholder='Enter Contact Number'
             />

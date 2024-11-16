@@ -86,7 +86,7 @@ const RegistrationForm = () => {
             </button>
             <NavLink
               className='underline text-text-light opacity-50 transition-all duration-300 hover:text-green'
-              to='/register'
+              to='/login'
             >
               Have account? Login
             </NavLink>

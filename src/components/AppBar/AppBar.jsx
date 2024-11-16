@@ -25,11 +25,11 @@ const AppBar = () => {
           <ThemeToggleButton />
         </div>
       </div>
-      <div className='hidden md:flex mb-[11px]'>
+      <div className='hidden md:flex mb-[11px] w-[90%] md:w-[80%] mx-auto'>
         <Navigation />
       </div>
       {login && (
-        <div className='block w-full  md:hidden fixed bottom-0 mx-auto'>
+        <div className='block w-full  md:hidden fixed bottom-0 mx-auto z-50'>
           <MobileBottomMenu />
         </div>
       )}
