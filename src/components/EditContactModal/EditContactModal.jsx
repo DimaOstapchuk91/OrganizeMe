@@ -38,7 +38,7 @@ export const EditContactModal = ({ closeModal, user }) => {
               <ErrorMessage className='text-red' name='name' component='p' />
             </div>
             <Field
-              className='py-2 px-5 h-8 rounded-md outline-none focus:border-2 focus:border-green'
+              className='py-2 px-5 h-8 rounded-md outline-none shadow-custom-black focus:border-2 focus:border-green'
               name='name'
             />
           </label>
@@ -48,7 +48,7 @@ export const EditContactModal = ({ closeModal, user }) => {
               <ErrorMessage className='text-red' name='number' component='p' />
             </div>
             <Field
-              className='py-2 px-5 h-8 rounded-md outline-none focus:border-2 focus:border-green'
+              className='py-2 px-5 h-8 rounded-md outline-none shadow-custom-black focus:border-2 focus:border-green'
               name='number'
             />
           </label>

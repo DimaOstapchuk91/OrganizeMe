@@ -30,7 +30,7 @@ const RegistrationForm = () => {
                 <ErrorMessage className='text-red' name='name' component='p' />
               </div>
               <Field
-                className='py-2 px-5 h-8 w-full rounded-md  border-2 outline-none  text-base font-medium shadow-custom-black  focus:border-green'
+                className='py-2 px-5 h-8 w-full rounded-md outline-none  text-base font-medium shadow-custom-black focus:border-green focus:border-2 '
                 name='name'
                 placeholder='Enter Name'
               />
@@ -41,7 +41,7 @@ const RegistrationForm = () => {
                 <ErrorMessage className='text-red' name='email' component='p' />
               </div>
               <Field
-                className='py-2 px-5 h-8 w-full rounded-md  border-2 outline-none  text-base font-medium shadow-custom-black  focus:border-green'
+                className='py-2 px-5 h-8 w-full rounded-md outline-none  text-base font-medium shadow-custom-black  focus:border-green focus:border-2'
                 name='email'
                 placeholder='Enter email'
               />
@@ -56,7 +56,7 @@ const RegistrationForm = () => {
                 />
               </div>
               <Field
-                className='py-2 px-5 h-8 w-full rounded-md  border-2 outline-none  text-base font-medium shadow-custom-black  focus:border-green'
+                className='py-2 px-5 h-8 w-full rounded-md outline-none  text-base font-medium shadow-custom-black  focus:border-green focus:border-2'
                 name='password'
                 placeholder='Enter the password'
               />

@@ -37,7 +37,7 @@ const ContactForm = () => {
               <ErrorMessage className='text-red' name='name' component='p' />
             </div>
             <Field
-              className='py-2 px-5 h-8 w-full rounded-md  border-2 outline-none text-base font-medium shadow-custom-black focus:border-green'
+              className='py-2 px-5 h-8 w-full rounded-md outline-none text-base font-medium shadow-custom-black focus:border-2 focus:border-green'
               name='name'
               placeholder='Enter Contact Name'
             />
@@ -48,7 +48,7 @@ const ContactForm = () => {
               <ErrorMessage className='text-red' name='number' component='p' />
             </div>
             <Field
-              className='py-2 px-5 h-8 w-full rounded-md  border-2 outline-none  text-base font-medium shadow-custom-black  focus:border-green'
+              className='py-2 px-5 h-8 w-full rounded-md  outline-none  text-base font-medium shadow-custom-black  focus:border-2 focus:border-green'
               name='number'
               placeholder='Enter Contact Number'
             />
